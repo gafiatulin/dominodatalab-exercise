@@ -5,6 +5,7 @@ trait Concordance{
   def concordanceForString(str: String): SortedMap[String, (Int, Array[Int])] = {
     var concordance: SortedMap[String, (Int, Array[Int])] = SortedMap()
     val sentences = str.split("[.!?]\\s+(?=[A-Z]|$)")
+    val wordsInSentences = sentences.map(_.toLowerCase.split("""(?<=[a-z.])[\s,;\'\"\-\–\—\[\]\(\)\{\}\:]{2,}(?=$|[a-z])|\s+"""))
   }
 }
 
