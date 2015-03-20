@@ -6,6 +6,16 @@ trait Concordance{
     var concordance: SortedMap[String, (Int, Array[Int])] = SortedMap()
     val sentences = str.split("[.!?]\\s+(?=[A-Z]|$)")
     val wordsInSentences = sentences.map(_.toLowerCase.split("""(?<=[a-z.])[\s,;\'\"\-\–\—\[\]\(\)\{\}\:]{2,}(?=$|[a-z])|\s+"""))
+    for((words, numOfSentence)<- wordsInSentences.zipWithIndex){
+      words.foreach{
+        word => concordance.get(word) match {
+          case None => concordance = concordance +((word, (1, Array(numOfSentence))))
+          case Some(countAndPositions) =>
+            concordance = (concordance - (word)) + ((word, (countAndPositions._1 + 1, countAndPositions._2 :+ numOfSentence)))
+        }
+      }
+    }
+    return concordance
   }
 }
 
