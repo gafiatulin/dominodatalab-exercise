@@ -1,5 +1,11 @@
 import scala.util.{Try, Success, Failure}
 
+trait Concordance{
+  def concordanceForString(str: String): SortedMap[String, (Int, Array[Int])] = {
+
+  }
+}
+
 object Main{
   def main(args: Array[String]) = {
     val text = Try{
