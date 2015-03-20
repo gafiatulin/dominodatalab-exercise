@@ -1,4 +1,4 @@
-## Coding exercise for [Domino](http://www.dominodatalab.com)
+## My solution to [Domino](http://www.dominodatalab.com)'s coding exercise
 ###Usage
 Call with option -f followed by the name of the input file or with no arguments (will read text from stdin).
 - With sbt: `sbt run` or `sbt "run -f input.txt"`.
