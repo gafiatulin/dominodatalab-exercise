@@ -1,4 +1,5 @@
 import scala.util.{Try, Success, Failure}
+import scala.collection.immutable.SortedMap
 
 trait Concordance{
   def concordanceForString(str: String): SortedMap[String, (Int, Array[Int])] = {
