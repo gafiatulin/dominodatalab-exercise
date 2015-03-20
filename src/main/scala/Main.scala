@@ -19,7 +19,7 @@ trait Concordance{
   }
 }
 
-object Main{
+object Main extends Concordance{
   def main(args: Array[String]) = {
     val text = Try{
       args match {
