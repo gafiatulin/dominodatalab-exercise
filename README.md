@@ -1,8 +1,12 @@
-# Coding exercise for [Domino](http://www.dominodatalab.com)
-##Dependencies
-- [sbt](https://github.com/sbt/sbt)
+## Coding exercise for [Domino](http://www.dominodatalab.com)
+###Usage
+Call with -f argument followed by name of input file or with no arguments (will read text from stdin).
+- With sbt: `sbt run` or `sbt "run -f input.txt"`.
+- With executable jar: Build executable jar with `sbt assembly` and run it with `java -jar dominodatalab-exercise-assembly-0.1.jar` or `java -jar dominodatalab-exercise-assembly-0.1.jar -f input.txt`
 
-##Task
+###Dependencies
+- [sbt](https://github.com/sbt/sbt)
+###Task
 A "concordance" is an alphabetical list of the words present in a text with a count of how often each word appears and citations of where each word appears in the text (e.g., page number). Write a program — in the programming language of your choice — that will generate a concordance of an arbitrary text document written in English: the text can be read from stdin, and the program should output the concordance to stdout or a file. For each word, it should print the count and the sorted list of citations, in this case the zero-indexed sentence number in which that word occurs. You may assume that the input contains only spaces, newlines, standard English letters, and standard English punctuation marks.
 
 Below is an example of what your program would compute for the paragraph above. (The particular formatting below isn't required, as long as you output the word, number of occurrences, and list of sentence numbers.)
