@@ -19,5 +19,10 @@ object Main{
           io.Source.stdin.getLines.takeWhile(_.nonEmpty).mkString(" ") + " "
       }
     }
+    val concordance = text.map(concordanceForString)
+    concordance match{
+      case Failure(e) => println(e)
+      case Success(c) => c.foreach{entry => println(entry._1 + " {" + entry._2._1 +": "+ entry._2._2.mkString(", ") + "}")}
+    }
   }
 }
