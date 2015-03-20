@@ -1,3 +1,5 @@
+package prog
+
 import scala.util.{Try, Success, Failure}
 import scala.collection.immutable.SortedMap
 
