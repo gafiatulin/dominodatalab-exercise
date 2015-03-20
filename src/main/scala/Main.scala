@@ -3,7 +3,8 @@ import scala.collection.immutable.SortedMap
 
 trait Concordance{
   def concordanceForString(str: String): SortedMap[String, (Int, Array[Int])] = {
-
+    var concordance: SortedMap[String, (Int, Array[Int])] = SortedMap()
+    val sentences = str.split("[.!?]\\s+(?=[A-Z]|$)")
   }
 }
 
