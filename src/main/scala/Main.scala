@@ -1,3 +1,4 @@
+import scala.util.{Try, Success, Failure}
 
 object Main{
   def main(args: Array[String]) = {
