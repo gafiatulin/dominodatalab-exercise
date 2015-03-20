@@ -1,6 +1,6 @@
 ## Coding exercise for [Domino](http://www.dominodatalab.com)
 ###Usage
-Call with -f argument followed by name of input file or with no arguments (will read text from stdin).
+Call with option -f followed by the name of the input file or with no arguments (will read text from stdin).
 - With sbt: `sbt run` or `sbt "run -f input.txt"`.
 - With executable jar: Build executable jar with `sbt assembly` and run it with `java -jar dominodatalab-exercise-assembly-0.1.jar` or `java -jar dominodatalab-exercise-assembly-0.1.jar -f input.txt`
 
